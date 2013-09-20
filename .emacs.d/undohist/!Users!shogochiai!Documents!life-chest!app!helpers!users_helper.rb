@@ -1,0 +1,2 @@
+
+((digest . "0eb37d958988adb98128cd1fd98cf9b7") (undo-list (307 . 309) (299 . 303) (#("  " 0 2 (fontified t)) . -299) (273 . 279) (#("    " 0 4 (fontified t)) . -273) (155 . 159) (#("  " 0 2 (fontified t)) . -155) (80 . 84) (#("  " 0 2 (fontified t)) . -80) (21 . 23) 1 (t 21041 16287 0 0) nil (#(" " 0 1 (fontified t)) . -21) nil (#(" " 0 1 (fontified t)) . -22) nil (20 . 23) (t 21041 16283 0 0) nil (nil rear-nonsticky nil 298 . 299) (nil fontified nil 20 . 299) (20 . 299) nil (20 . 22) (t 21012 50200 0 0)))
