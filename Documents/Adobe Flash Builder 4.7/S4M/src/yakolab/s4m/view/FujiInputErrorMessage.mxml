@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="506" height="154" close="closeHandler(event)"
+			   creationComplete="onCreationComplete(event)" title="譜字挿入位置の選択">	
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<fx:Script source="fujiInputAlert.as" />
+	<s:Label x="85" y="26" width="445" text="まず、右側の【方眼パネル】で挿入したい位置を選択してください。"
+			 textAlign="left"/>
+	<s:Button id="button_ok" x="196" y="69" width="86" height="31" label="OK"
+			  click="onOKClick(event)"/>
+	<s:Image x="27" y="16" width="42" height="42" source="@Embed(source='../../../assets/icons/Alert.png')"/>
+</s:TitleWindow>

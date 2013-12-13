@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="400" height="168" close="closeHandler(event)"
+			   creationComplete="onCreationComplete(event)" title="新しい名前の入力">	
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<fx:Script source="nameInputDialog.as" />
+	
+	<s:Label x="30" y="24" text="新しい名前を入力して下さい。"/>
+	<s:Button id="button_ok" x="193" y="91" width="86" height="31" label="OK"
+			  click="onOKClick(event)"/>
+	<s:Button id="button_cancel" x="289" y="90" width="88" height="32" label="キャンセル"
+			  click="onCancelClick(event)"/>
+	<s:TextInput id="textInput" x="30" y="49" width="347" skinClass="spark.skins.spark.TextInputSkin"/>
+</s:TitleWindow>

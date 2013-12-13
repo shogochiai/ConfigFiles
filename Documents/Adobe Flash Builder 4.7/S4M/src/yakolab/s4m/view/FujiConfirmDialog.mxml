@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="400" height="300" close="closeHandler(event)"
+			   creationComplete="onCreationComplete(event)" title="譜字位置の選択">	
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<fx:Script source="fujiConfirmDialog.as" />
+	
+	<s:Label x="103" y="26" text="この譜字の登録を行いますか？"/>
+	<s:Image id="image" styleName="imageConfirm"
+					   x="128" y="61" width="126" height="126">
+	</s:Image>
+	<s:Button id="button_ok" x="71" y="216" width="86" height="31" label="OK"
+			  click="onOKClick(event)"/>
+	<s:Button id="button_cancel" x="230" y="215" width="88" height="32" label="キャンセル"
+			  click="onCancelClick(event)"/>
+</s:TitleWindow>

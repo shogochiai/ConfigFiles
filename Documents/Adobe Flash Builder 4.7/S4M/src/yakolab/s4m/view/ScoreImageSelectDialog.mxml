@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="446" height="440" close="closeHandler(event)"
+			   creationComplete="onCreationComplete(event)" title="画像を選択">	
+	<fx:Declarations>
+		<!-- 非ビジュアルエレメント (サービス、値オブジェクトなど) をここに配置 -->
+	</fx:Declarations>
+	<fx:Script source="scoreImageSelectDialog.as" />
+	
+	<s:Button id="button_ok" x="207" y="356" width="86" height="31" label="選択"
+			  click="onOKClick(event)"/>
+	<s:Button id="button_add" x="41" y="322" width="64" height="23" label="新規追加"
+			  click="addButtonClick(event)"/>
+	<s:Button id="button_delete" x="119" y="321" width="53" height="23" label="削除"
+			  click="deleteButtonClick(event)"/>
+	<s:Button id="button_cancel" x="313" y="355" width="88" height="32" label="キャンセル"
+			  click="onCancelClick(event)"/>
+	<s:DataGrid id="dataGrid" styleName="dataGrid" x="40" y="22" width="373" height="303" rowHeight="100" requestedRowCount="4" resizableColumns="true" verticalScrollPolicy="on">
+		<s:columns>
+			<s:ArrayList><!-- itemRenderer="yakolab.s4m.view.ScoreImageGridRenderer" -->
+				<s:GridColumn width="100" dataField="id" headerText="画像" itemRenderer="yakolab.s4m.view.ScoreImageGridRenderer"></s:GridColumn>
+				<s:GridColumn width="250" dataField="name" headerText="名称"></s:GridColumn>
+			</s:ArrayList>
+		</s:columns>
+		<s:ArrayList id="dataList">
+		</s:ArrayList>
+	</s:DataGrid>
+	<mx:ProgressBar id="progress" visible="false" x="33" y="364" label="UPLOADING..." color="#966A1D"
+					fontFamily="Arial" indeterminate="true" labelPlacement="bottom"/>
+</s:TitleWindow>

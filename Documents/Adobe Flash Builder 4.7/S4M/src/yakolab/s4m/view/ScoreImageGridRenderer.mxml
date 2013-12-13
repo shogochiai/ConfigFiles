@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx" clipAndEnableScrolling="true">
+	
+	<fx:Script>
+		<![CDATA[
+			import spark.events.TextOperationEvent;
+			import spark.primitives.BitmapImage;
+			
+			import yakolab.s4m.util.SQLUtil;
+			private var image_id:int;
+			
+			import mx.core.BitmapAsset;
+			
+			[Bindable(event="dataPropertyChanged")]
+			private function loadImage():BitmapImage {
+				var image_id:int = data.image_id;
+				if(image_id < 1) return null;
+				
+				function afterLoaded(event:Event):void {
+					var bmp:Bitmap = Bitmap(event.target.content);
+					data.image = bmp;
+					image.source = bmp;
+				}
+				
+				var vars:URLVariables = new URLVariables();
+				vars.image_id = image_id;
+				SQLUtil.loadImage("loadScoreImageData.php", vars, afterLoaded);
+				
+				return null;
+			}
+			
+			protected function lbl_changeHandler(event:TextOperationEvent):void
+			{
+				dispatchEvent(new Event("dataPropertyChanged"));
+				
+			}
+			
+		]]>
+	</fx:Script>
+	<s:VGroup width="100" height="100">
+		<s:Image id="image" width="100%" height="100%" source="{data? loadImage() : null}"/>
+		<s:TextInput id="lbl" text="{data? data.image_id : null}" visible="false" includeInLayout="false" change="lbl_changeHandler(event)" />
+	</s:VGroup>
+	
+</s:GridItemRenderer>
