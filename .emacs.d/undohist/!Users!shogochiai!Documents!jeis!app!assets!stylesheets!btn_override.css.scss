@@ -1,0 +1,87 @@
+
+((digest . "d41d8cd98f00b204e9800998ecf8427e") (undo-list (#(" // Set text color
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  color: @white;
+}
+ // Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-dark.active {
+  color: rgba(255,255,255,.75);
+}
+
+ // Set the backgrounds
+
+
+.btn-primary {
+  .buttonBackground(@primaryButtonBackground, spin(@primaryButtonBackground, 20));
+}
+
+.btn-warning {
+  .buttonBackground(lighten(@orange, 15%), @orange);
+}
+
+.btn-danger {
+  .buttonBackground(#ee5f5b, #bd362f);
+}
+
+.btn-success {
+  .buttonBackground(#62c462, #51a351);
+}
+
+.btn-info {
+  .buttonBackground(#5bc0de, #2f96b4);
+}
+
+.btn-inverse {
+  .buttonBackground(#454545, #262626);
+}
+
+
+ // Cross-browser Jank
+
+button.btn,
+input[type=\"submit\"].btn {
+
+  // Firefox 3.6 only I believe
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // IE7 has some default padding on button controls
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+  &.large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+}" 0 1 (fontified t) 1 19 (fontified t face font-lock-comment-face) 19 181 (fontified t) 181 214 (fontified t face (css-selector)) 214 218 (fontified t) 218 229 (fontified t face css-property) 229 259 (fontified t) 259 264 (fontified t face css-property) 264 266 (fontified t) 266 272 (fontified t face font-lock-builtin-face) 272 276 (fontified t) 276 277 (fontified t face (css-selector)) 277 335 (fontified t face (font-lock-comment-face css-selector)) 335 453 (fontified t face (css-selector)) 453 457 (fontified t) 457 462 (fontified t face css-property) 462 491 (fontified t) 491 514 (fontified t face font-lock-comment-face) 1122 1143 (fontified t) 1143 1167 (fontified t) 1167 1177 (fontified t face (css-selector)) 1177 1232 (fontified t) 1232 1242 (fontified t face (css-selector)) 1242 1297 (fontified t) 1297 1298 (rear-nonsticky t fontified t)) . 1) (t 21070 29775 0 0) ((marker . 1) . -1298) ((marker) . -19) ((marker) . -19) ((marker) . -33) ((marker) . -33) ((marker) . -53) ((marker) . -53) ((marker) . -67) ((marker) . -67) ((marker) . -87) ((marker) . -87) ((marker) . -100) ((marker) . -100) ((marker) . -119) ((marker) . -119) ((marker) . -133) ((marker) . -133) ((marker) . -153) ((marker) . -153) ((marker) . -164) ((marker) . -164) ((marker . 1) . -1296) ((marker . 1) . -1296) ((marker) . -181) ((marker) . -181) ((marker) . -195) ((marker) . -195) ((marker) . -216) ((marker) . -216) ((marker) . -257) ((marker) . -257) ((marker) . -274) ((marker) . -274) ((marker) . -276) ((marker) . -276) ((marker) . -335) ((marker) . -335) ((marker) . -356) ((marker) . -356) ((marker) . -377) ((marker) . -377) ((marker) . -397) ((marker) . -397) ((marker) . -418) ((marker) . -418) ((marker) . -436) ((marker) . -436) ((marker) . -455) ((marker) . -455) ((marker) . -487) ((marker) . -487) ((marker) . -489) ((marker) . -489) ((marker) . -490) ((marker) . -490) ((marker) . -514) ((marker) . -514) ((marker) . -515) ((marker) . -515) ((marker) . -516) ((marker) . -516) ((marker) . -531) ((marker) . -531) ((marker) . -614) ((marker) . -614) ((marker) . -616) ((marker) . -616) ((marker) . -617) ((marker) . -617) ((marker) . -632) ((marker) . -632) ((marker) . -685) ((marker) . -685) ((marker) . -687) ((marker) . -687) ((marker) . -688) ((marker) . -688) ((marker) . -702) ((marker) . -702) ((marker) . -741) ((marker) . -741) ((marker) . -743) ((marker) . -743) ((marker) . -744) ((marker) . -744) ((marker) . -759) ((marker) . -759) ((marker) . -798) ((marker) . -798) ((marker) . -800) ((marker) . -800) ((marker) . -801) ((marker) . -801) ((marker) . -813) ((marker) . -813) ((marker) . -852) ((marker) . -852) ((marker) . -854) ((marker) . -854) ((marker) . -855) ((marker) . -855) ((marker) . -870) ((marker) . -870) ((marker) . -909) ((marker) . -909) ((marker) . -911) ((marker) . -911) ((marker) . -912) ((marker) . -912) ((marker) . -913) ((marker) . -913) ((marker) . -936) ((marker) . -936) ((marker) . -937) ((marker) . -937) ((marker) . -949) ((marker) . -949) ((marker) . -976) ((marker) . -976) ((marker) . -977) ((marker) . -977) ((marker) . -1009) ((marker) . -1009) ((marker) . -1033) ((marker) . -1033) ((marker) . -1049) ((marker) . -1049) ((marker) . -1064) ((marker) . -1064) ((marker) . -1068) ((marker) . -1068) ((marker) . -1069) ((marker) . -1069) ((marker) . -1122) ((marker) . -1122) ((marker) . -1143) ((marker) . -1143) ((marker) . -1167) ((marker) . -1167) ((marker) . -1179) ((marker) . -1179) ((marker) . -1202) ((marker) . -1202) ((marker) . -1228) ((marker) . -1228) ((marker) . -1232) ((marker) . -1232) ((marker) . -1244) ((marker) . -1244) ((marker) . -1267) ((marker) . -1267) ((marker) . -1293) ((marker) . -1293) ((marker) . -1297) ((marker) . -1297) nil (nil rear-nonsticky nil 1298 . 1299) (nil fontified nil 1 . 1299) (1 . 1299) (t 21070 29736 0 0) nil (#("." 0 1 (fontified t)) . -1) ((marker . 1) . -1) ((marker . 1) . -1) ((marker . 1) . -1) ((marker . 1) . -1) ((marker . 1) . -1) nil (#("btn-primary {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF);
+    background-repeat: repeat-x;
+    border-color: rgba(255, 255, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}" 0 12 (fontified t face (css-selector)) 12 18 (fontified t) 18 34 (fontified t face css-property) 34 49 (fontified t) 49 65 (fontified t face css-property) 65 117 (fontified t) 117 134 (fontified t face css-property) 134 150 (fontified t) 150 162 (fontified t face css-property) 162 231 (fontified t) 231 236 (fontified t face css-property) 236 251 (fontified t) 251 262 (fontified t face css-property) 262 294 (fontified t) 294 295 (fontified t rear-nonsticky t)) . 2) (t 21070 29380 0 0) ((marker . 1) . -295) ((marker . 1) . -43) ((marker . 1) . -295) ((marker . 1) . -295) ((marker . 1) . -36) nil (nil rear-nonsticky nil 296 . 297) (nil fontified nil 1 . 297) (1 . 297) (t 21070 29367 0 0) nil (#(" *= require bootstrap_and_overrides
+ *= require scaffolds
+" 0 57 (fontified t) 57 58 (fontified t rear-nonsticky t)) . -1) (t 21070 29365 0 0) nil (nil rear-nonsticky nil 58 . 59) (nil fontified nil 1 . 59) (1 . 59) (t 0 0 0 -1000)))

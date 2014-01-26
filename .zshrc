@@ -1,18 +1,33 @@
-#########################################
-#ochiai's
+##################################
+# Goolge Search by Google Chrome #
+##################################
+ggl() {
+    local str opt
+    if [ $# != 0 ]; then
+        for i in $*; do
+            # $strが空じゃない場合、検索ワードを+記号でつなぐ(and検索)
+            str="$str${str:++}$i"
+        done
+        opt='search?num=100'
+        opt="${opt}&q=${str}"
+    fi
+    open -a Google\ Chrome http://www.google.co.jp/$opt
+}
 
-#gem bundler
-#export PATH=$PATH:/usr/local/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/bin
+####便利エイリアス####
+alias cdlife="cd /Users/shogochiai/Documents/life-chest"
+alias cdjeis="cd /Users/shogochiai/Documents/jeis"
+alias cdtl='cd /Users/shogochiai/Documents/tlmaker'
+alias cdmusic='cd /Users/shogochiai/Documents/UNS/S4M/trunk'
+alias cdcite='cd /Users/shogochiai/Documents/citedly'
 
-#gem rails3.2.14
-#export PATH=$PATH:/usr/local/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/railties-3.2.14/lib
 
-#rbenv
-export RBENV_ROOT=/usr/local/rbenv/versions/2.0.0-p247
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
-
-###########################################
+#####便利グローバルエイリアス#####
+alias -g G='| grep'
+grepall() {
+  grep -ilr $# ./
+}
+##################################
 
 
 alias ls='ls -G'
@@ -31,9 +46,6 @@ export PATH=/usr/local/mysql/bin:$PATH
 # export PATH=$ANDROID_HOME/tools:$PATH
 # export PATH=$ANDROID_HOME/platform-tools:$PATH
 # export PATH=/Users/dev/adt-bundle-mac/sdk:$PATH
-
-# Emacs
-alias em='/Applications/Emacs.app/Contents/MacOS/Emacs'
 
 #export DYLD_FALLBACK_LIBRARY_PATH=/usr/lib
 
@@ -247,8 +259,21 @@ esac
 #screen
 #fi
 
-alias be="bundle exec"
+alias be="bundle exec time spring"
 alias knife='nocorrect knife'
 
-eval "$(rbenv init - zsh)"
 
+
+#rbenv
+export PATH="/usr/local/Cellar/autoconf/2.69/bin:$PATH"
+export RBENV_ROOT=/usr/local/rbenv
+export PATH="$RBENV_ROOT/bin:$PATH"
+export PATH=$RBENV_ROOT/shims:$PATH
+eval "$(rbenv init - zsh)"
+eval "rbenv global 2.0.0-p353"
+eval "rbenv rehash"
+
+
+
+#エラーを良い感じに返す
+setopt nonomatch

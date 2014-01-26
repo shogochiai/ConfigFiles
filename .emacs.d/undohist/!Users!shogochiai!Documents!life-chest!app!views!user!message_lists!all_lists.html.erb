@@ -1,0 +1,28 @@
+
+((digest . "d41d8cd98f00b204e9800998ecf8427e") (undo-list (#("<h1>MessageLists#all_lists</h1>
+
+<h1>メッセージ送信先一覧</h1>
+
+<table class=\"table table-striped table-bordered table-hover\">
+  <thead>
+    <tr>
+      <th>送り先</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @message_lists.each do |message_list|  %>
+    <tr>
+      <td><%= message_list.name %></td>
+      <td><%= link_to '編集',edit_user_article_message_list_path(message_list.article_id, message_list) %>
+        <%= link_to '削除', user_article_message_list_path(message_list.article_id, message_list), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+" 0 1 (fontified t) 1 3 (fontified t face font-lock-function-name-face) 3 4 (fontified t) 4 26 (fontified t face (bold underline)) 26 28 (fontified t) 28 30 (fontified t face font-lock-function-name-face) 30 34 (fontified t) 34 36 (fontified t face font-lock-function-name-face) 36 37 (fontified t) 37 47 (fontified t face (bold underline)) 47 49 (fontified t) 49 51 (fontified t face font-lock-function-name-face) 51 53 (fontified t) 53 54 (fontified t) 54 55 (fontified t) 55 60 (fontified t face font-lock-function-name-face) 60 61 (fontified t) 61 66 (fontified t face font-lock-variable-name-face) 66 67 (fontified t) 67 115 (fontified t face font-lock-string-face) 115 117 (fontified t) 117 120 (fontified t) 120 125 (fontified t face font-lock-function-name-face) 125 132 (fontified t) 132 134 (fontified t face font-lock-function-name-face) 134 143 (fontified t) 143 145 (fontified t face font-lock-function-name-face) 145 151 (fontified t) 151 153 (fontified t face font-lock-function-name-face) 153 162 (fontified t) 162 164 (fontified t face font-lock-function-name-face) 164 167 (fontified t) 167 169 (fontified t face font-lock-function-name-face) 169 177 (fontified t) 177 179 (fontified t face font-lock-function-name-face) 179 185 (fontified t) 185 190 (fontified t face font-lock-function-name-face) 190 195 (fontified t) 195 200 (fontified t face font-lock-function-name-face) 200 256 (fontified t) 256 258 (fontified t face font-lock-function-name-face) 258 267 (fontified t) 267 269 (fontified t face font-lock-function-name-face) 269 296 (fontified t) 296 298 (fontified t face font-lock-function-name-face) 298 300 (fontified t) 300 307 (fontified t) 307 309 (fontified t face font-lock-function-name-face) 309 363 (fontified t) 363 374 (fontified t) 374 375 (fontified t rear-nonsticky t) 375 386 (fontified t) 386 405 (fontified t) 405 462 (fontified t) 462 473 (fontified t) 473 474 (rear-nonsticky t fontified t) 474 484 (fontified t) 484 485 (fontified t rear-nonsticky t) 485 557 (fontified t) 557 559 (fontified t face font-lock-function-name-face) 559 561 (fontified t) 561 567 (fontified t) 567 569 (fontified t face font-lock-function-name-face) 569 571 (fontified t) 571 589 (fontified t) 589 594 (fontified t face font-lock-function-name-face) 594 598 (fontified t) 598 603 (fontified t face font-lock-function-name-face) 603 607 (fontified t) 607 610 (fontified t face font-lock-function-name-face) 610 612 (fontified t)) . 1) (t 21195 54925 0 0) ((marker . 1) . -612) ((marker . 1) . -53) ((marker . 1) . -53) ((marker . 1) . -431) ((marker . 1) . -431) ((marker . 1) . -388) ((marker . 1) . -363) ((marker . 1) . -386) ((marker . 1) . -462) ((marker . 1) . -299) ((marker . 1) . -299) ((marker . 1) . -299) ((marker . 1) . -462) ((marker . 1) . -299) ((marker . 1) . -462) ((marker . 1) . -299) ((marker . 1) . -420) ((marker . 1) . -420) ((marker . 1) . -462) ((marker . 1) . -420) ((marker*) . 612) ((marker) . -1) ((marker*) . 612) ((marker) . -4) nil (nil rear-nonsticky nil 485 . 486) (nil fontified nil 475 . 486) (nil fontified nil 474 . 475) (nil fontified nil 463 . 474) (463 . 486) nil (#("@article" 0 8 (fontified t)) . -463) (t 21195 54919 0 0) nil (377 . 387) (t 21195 54916 0 0) (376 . 377) (t 21195 54915 0 0) nil (nil rear-nonsticky nil 375 . 376) (nil fontified nil 364 . 376) (364 . 376) nil (#("@" 0 1 (fontified t)) . -364) nil (#("a" 0 1 (fontified t)) . -365) nil (#("r" 0 1 (fontified t)) . -366) (t 21195 54913 0 0) nil (#("t" 0 1 (fontified t)) . -367) nil (#("i" 0 1 (fontified t)) . -368) nil (#("c" 0 1 (fontified t)) . -369) nil (#("l" 0 1 (fontified t)) . -370) nil (#("e" 0 1 (fontified t)) . -371) (t 21195 54843 0 0) nil (#("
+" 0 1 (fontified t)) . -54) (t 21195 54841 0 0) ((marker . 1) . -1) ((marker . 1) . -1) nil (#("<div>
+  <p><%= link_to \"メッセージ送信先作成\", new_user_article_message_list_path(@article) if current_user %></p>
+</div>
+" 0 1 (fontified t) 1 4 (fontified t face font-lock-function-name-face) 4 9 (fontified t) 9 10 (fontified t face font-lock-function-name-face) 10 23 (fontified t) 23 35 (fontified t face font-lock-string-face) 35 102 (fontified t) 102 103 (fontified t face font-lock-function-name-face) 103 107 (fontified t) 107 110 (fontified t face font-lock-function-name-face) 110 112 (fontified t)) . -55) (t 21195 54447 0 0)))

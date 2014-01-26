@@ -1,0 +1,3 @@
+
+((digest . "86d3b5b0fc8db3dbbf098fa06b8bbf7f") (undo-list ("gem 'birthday'
+" . -491) (t 21096 41003 0 0) ((marker . 881) . -15) ((marker . 881) . -15) ((marker . 491) . -14) ((marker . 491) . -14) ((marker . 491) . -14) ((marker . 491) . -14) nil (491 . 505) (t 21096 41002 0 0) nil (490 . 491) (t 21096 6001 0 0)))

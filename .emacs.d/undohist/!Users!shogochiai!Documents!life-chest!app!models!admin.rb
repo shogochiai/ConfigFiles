@@ -1,0 +1,4 @@
+
+((digest . "d2806fa8e6254bff11e1bd0e2eded1cb") (undo-list (#("
+" 0 1 (fontified t)) . -83) ((marker) . -1) ((marker) . -1) nil (#(" " 0 1 (fontified t syntax-table nil face (my-face-spc-at-eol))) . -84) nil (#(" " 0 1 (fontified t syntax-table nil face (my-face-spc-at-eol))) . -85) nil (#("
+" 0 1 (fontified t)) . -86) ((marker) . -1) ((marker) . -1) nil (#(" " 0 1 (fontified t syntax-table nil face (my-face-spc-at-eol))) . -87) nil (#(" " 0 1 (fontified t syntax-table nil face (my-face-spc-at-eol))) . -88) nil (#("d" 0 1 (fontified t syntax-table nil)) . -89) ((marker*) . 1) nil (#("e" 0 1 (fontified t syntax-table nil)) . -90) nil (#("f" 0 1 (fontified t syntax-table nil face font-lock-keyword-face)) . -91) (t 21190 58816 0 0) nil (89 . 92) (t 21190 58814 0 0) nil (83 . 89) (t 21058 44192 0 0)))

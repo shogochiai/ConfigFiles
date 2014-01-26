@@ -39,12 +39,18 @@
    (setenv "PATH" (concat dir ":" (getenv "PATH")))
    (setq exec-path (append (list dir) exec-path))))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ファイル検索関連
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq default-directory "/Users/shogochiai/Documents/")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 表示関係
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; タブの表示幅の指定&タブを使うのを抑止
-(setq default-tab-width 4 indent-tabs-mode nil)
+(setq default-tab-width 2 indent-tabs-mode nil)
 
 ;; 保存時に自動的にタブをスペース
 (require 'untabify-file)

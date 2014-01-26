@@ -1,0 +1,2 @@
+
+((digest . "f3825cbc1e517c00c975fe3bb8352aaa") (undo-list nil (#("s" 0 1 (fontified t)) . -467) (t 21099 30831 0 0) nil (364 . 369) (t 21099 29538 0 0) nil (418 . 422) nil (#("s" 0 1 (fontified t)) . -418) nil (#("e" 0 1 (fontified t)) . -419) nil (#("l" 0 1 (fontified t)) . -420) nil (#("e" 0 1 (fontified t)) . -421) nil (#("c" 0 1 (fontified t)) . -422) nil (#("t" 0 1 (fontified t)) . -423) (t 21099 29533 0 0) nil undo-tree-canary))
