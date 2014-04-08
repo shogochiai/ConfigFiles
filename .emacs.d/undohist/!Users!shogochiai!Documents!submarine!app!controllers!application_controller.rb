@@ -1,0 +1,8 @@
+
+((digest . "d7f4e898f06e539da5d8dc444dcc2bf4") (undo-list (#("
+" 0 1 (fontified t)) . -570) ((marker . 570) . -1) ((marker) . -1) ((marker) . -1) ((marker . 570) . -1) nil (#("  def record_not_found
+    render file: \"#{Rails.root}/public/404.html\", status: 404
+  end
+" 0 2 (fontified t) 2 5 (fontified t face font-lock-keyword-face) 5 6 (fontified t) 6 21 (fontified t face font-lock-function-name-face) 21 22 (fontified t syntax-table nil face font-lock-function-name-face) 22 27 (fontified t) 27 33 (fontified t face font-lock-builtin-face) 33 40 (fontified t) 40 41 (fontified t face font-lock-string-face) 41 42 (fontified t syntax-table (1) face font-lock-variable-name-face) 42 54 (fontified t face font-lock-variable-name-face) 54 71 (fontified t face font-lock-string-face) 71 83 (fontified t) 83 84 (fontified t syntax-table nil) 84 87 (fontified t) 87 89 (fontified t face font-lock-keyword-face) 89 90 (fontified t syntax-table nil face font-lock-keyword-face) 90 91 (fontified t)) . -571) ((marker) . -23) ((marker) . -23) ((marker) . -85) ((marker) . -85) ((marker) . -91) ((marker) . -91) nil (#("  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
+" 0 2 (fontified t) 2 13 (fontified t face font-lock-builtin-face) 13 14 (fontified t) 14 42 (fontified t face font-lock-type-face) 42 50 (fontified t) 50 66 (fontified t face font-lock-constant-face) 66 67 (fontified t syntax-table nil face font-lock-constant-face) 67 68 (fontified t) 68 69 (fontified t)) . -276) (t 21270 51985 0 0) ((marker) . -68) ((marker) . -68) ((marker . 570) . -69) ((marker . 570) . -69) nil undo-tree-canary))

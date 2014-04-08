@@ -62,8 +62,8 @@
 (if window-system (progn
   (set-background-color "Black")       ; 背景色
   (set-foreground-color "White")       ; 前景色
-  (set-cursor-color "Yellow")          ; カーソル色
-  (set-frame-parameter nil 'alpha 75)  ; 透過具合
+  (set-cursor-color "Green")          ; カーソル色
+  (set-frame-parameter nil 'alpha 70)  ; 透過具合
 ))
 
 ;; 行番号を表示

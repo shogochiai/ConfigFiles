@@ -1,26 +1,128 @@
 ##################################
-# Goolge Search by Google Chrome #
+# Goolge Search by Safari #
 ##################################
-ggl() {
-    local str opt
-    if [ $# != 0 ]; then
-        for i in $*; do
-            # $strが空じゃない場合、検索ワードを+記号でつなぐ(and検索)
-            str="$str${str:++}$i"
-        done
-        opt='search?num=100'
-        opt="${opt}&q=${str}"
+google () {
+    if [ $(echo $1 | egrep "^-[cfs]$") ]; then
+        local opt="$1"
+        shift
     fi
-    open -a Google\ Chrome http://www.google.co.jp/$opt
+    local url="https://www.google.co.jp/search?q=${*// /+}"
+    local app="/Applications"
+    local c="${app}/Google Chrome.app"
+    local f="${app}/Firefox.app"
+    local s="${app}/Safari.app"
+    case ${opt} in
+        "-c")   open "${url}" -a "$c";;
+        "-f")   open "${url}" -a "$f";;
+        "-s")   open "${url}" -a "$s";;
+        *)      open "${url}";;
+    esac
+}
+
+ggl () {
+  google -s $*
 }
 
 ####便利エイリアス####
-alias cdlife="cd /Users/shogochiai/Documents/life-chest"
-alias cdjeis="cd /Users/shogochiai/Documents/jeis"
-alias cdtl='cd /Users/shogochiai/Documents/tlmaker'
-alias cdmusic='cd /Users/shogochiai/Documents/UNS/S4M/trunk'
-alias cdcite='cd /Users/shogochiai/Documents/citedly'
+alias -g Life="/Users/shogochiai/Documents/life-chest"
+alias -g Jeis="cd /Users/shogochiai/Documents/jeis"
+alias -g Tl='cd /Users/shogochiai/Documents/tlmaker'
+alias -g Music='cd /Users/shogochiai/Documents/UNS/S4M/trunk'
+alias -g Cite='cd /Users/shogochiai/Documents/citedly'
+alias -g Han='cd /Users/shogochiai/Documents/hansode'
+alias -g Sub='cd /Users/shogochiai/Documents/submarine'
 
+alias cl='find . -type f | xargs cat | wc -l'
+alias ls='ls -G'
+alias glgg='git logg'
+alias glg='git logg | head'
+
+####rails関数####
+
+rails_new () {
+  rails new $* -T -m rails_template/rails_template.rb -d=mysql --skip-bundle
+}
+
+####git関数####
+gcm () {
+  git commit -m "$*"
+}
+
+gps () {
+  git push origin master
+}
+
+gft () {
+  git fetch upstream
+}
+
+gmg () {
+  git merge upstream/master
+}
+
+gst () {
+  git status -s -b && git stash list
+}
+
+gdc () {
+  git diff --cached
+}
+
+grm () {
+  git rm --cached $*
+}
+
+gsta () {
+  if [ $# -eq 1 ]; then
+    git add `git status -s -b | grep -v "^#" | awk '{print$1="";print}' | grep -v "^$" | awk "NR==$1"`
+  else
+    exit 1
+  fi
+}
+
+gstall () {
+  git add -A
+}
+
+gstd () {
+  if [ $# -eq 1 ]; then
+    git diff -- `git status -s -b | grep -v "^#" | awk '{print$1="";print}' | grep -v "^$" | awk "NR==$1"`
+  else
+    exit 1
+  fi
+}
+
+gstv () {
+  if [ $# -eq 1 ]; then
+    vi `git status -s -b | grep -v "^#" | awk '{print$1="";print}' | grep -v "^$" | awk "NR==$1"`
+  else
+    exit 1
+  fi
+}
+
+gb () {
+  git branch -a
+}
+
+gche () {
+  git checkout $*
+}
+
+gcheb () {
+  git checkout -b $*
+}
+
+gcm () {
+   git commit -m "$*"
+}
+
+glph () {
+  git log --oneline --decorate --graph $*
+}
+
+gr () {
+  git reset --hard HEAD~$*
+}
 
 #####便利グローバルエイリアス#####
 alias -g G='| grep'
@@ -28,9 +130,6 @@ grepall() {
   grep -ilr $# ./
 }
 ##################################
-
-
-alias ls='ls -G'
 
 export PATH=/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin:$PATH
 export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -259,7 +358,8 @@ esac
 #screen
 #fi
 
-alias be="bundle exec time spring"
+alias be="bundle exec"
+#alias be="bundle exec time spring"
 alias knife='nocorrect knife'
 
 
@@ -270,10 +370,13 @@ export RBENV_ROOT=/usr/local/rbenv
 export PATH="$RBENV_ROOT/bin:$PATH"
 export PATH=$RBENV_ROOT/shims:$PATH
 eval "$(rbenv init - zsh)"
-eval "rbenv global 2.0.0-p353"
+eval "rbenv global 2.1.1"
 eval "rbenv rehash"
 
 
 
 #エラーを良い感じに返す
 setopt nonomatch
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -1,0 +1,74 @@
+
+((digest . "4d1d37458f73dcb323a54d75fbc5a808") (undo-list (#("
+$(function() {
+  $(\"form #student_lecture_possible_class_id\").change(function() {
+    var url;
+    url = \"http://\" + location.host + \"/master/possible_classes/\" + this.value + \".json\";
+    $.ajax({
+      async: true,
+      type: \"get\",
+      dataType: \"json\",
+      url: url,
+      success: function(possible_class) {
+        var select;
+        select = $(\"#student_lecture_rule_1\");
+        if (possible_class.rule_1 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+        select = $(\"#student_lecture_rule_2\");
+        if (possible_class.rule_2 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+        select = $(\"#student_lecture_rule_3\");
+        if (possible_class.rule_3 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+        select = $(\"#student_lecture_rule_4\");
+        if (possible_class.rule_4 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+        select = $(\"#student_lecture_practical_1\");
+        if (possible_class.practical_1 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+        select = $(\"#student_lecture_practical_2\");
+        if (possible_class.practical_2 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+        select = $(\"#student_lecture_practical_3\");
+        if (possible_class.practical_3 === true) {
+          select.attr(\"checked\", \"checked\");
+          select.checked = true;
+        } else {
+          select.attr(\"checked\", false);
+          select.checked = false;
+        }
+      }
+    });
+  });
+});
+" 3 11 (face font-lock-keyword-face) 14 15 (js--pstate ((nil 1 function 3 t nil) (nil -2305843009213693952 toplevel nil nil nil))) 20 61 (face font-lock-string-face) 70 78 (face font-lock-keyword-face) 81 82 (js--pstate ((nil 3 function 70 t nil) (nil 1 function 3 t nil) (nil -2305843009213693952 toplevel nil nil nil))) 87 90 (face font-lock-keyword-face) 91 94 (face font-lock-variable-name-face) 106 115 (face font-lock-string-face) 134 161 (face font-lock-string-face) 164 168 (face font-lock-constant-face) 177 184 (face font-lock-string-face) 212 216 (face font-lock-constant-face) 230 235 (face font-lock-string-face) 253 259 (face font-lock-string-face) 283 290 (face font-lock-function-name-face) 292 300 (face font-lock-keyword-face) 301 315 (face font-lock-variable-name-face) 317 318 (js--pstate ((nil 6 function 283 ("success") nil) (nil 3 function 70 t nil) (nil 1 function 3 t nil) (nil -2305843009213693952 toplevel nil nil nil))) 327 330 (face font-lock-keyword-face) 331 337 (face font-lock-variable-name-face) 358 383 (face font-lock-string-face) 394 396 (face font-lock-keyword-face) 424 428 (face font-lock-constant-face) 454 463 (face font-lock-string-face) 465 474 (face font-lock-string-face) 504 508 (face font-lock-constant-face) 520 524 (face font-lock-keyword-face) 549 558 (face font-lock-string-face) 560 565 (face font-lock-constant-face) 595 600 (face font-lock-constant-face) 631 656 (face font-lock-string-face) 667 669 (face font-lock-keyword-face) 697 701 (face font-lock-constant-face) 727 736 (face font-lock-string-face) 738 747 (face font-lock-string-face) 777 781 (face font-lock-constant-face) 793 797 (face font-lock-keyword-face) 822 831 (face font-lock-string-face) 833 838 (face font-lock-constant-face) 868 873 (face font-lock-constant-face) 904 929 (face font-lock-string-face) 940 942 (face font-lock-keyword-face) 970 974 (face font-lock-constant-face) 1000 1009 (face font-lock-string-face) 1011 1020 (face font-lock-string-face)) . -170) (t 21313 31341 0 0) ((marker . 1) . -1895) ((marker . 170) . -15) ((marker . 170) . -1) ((marker . 170) . -1) ((marker) . -2270) ((marker) . -2270) ((marker) . -1997) ((marker) . -1997) ((marker) . -2302) ((marker) . -2302) ((marker) . -2296) ((marker) . -2296) ((marker) . -2288) ((marker) . -2288) ((marker) . -2280) ((marker) . -2280) ((marker) . -2236) ((marker) . -2236) ((marker) . -2195) ((marker) . -2195) ((marker) . -2178) ((marker) . -2178) ((marker) . -2145) ((marker) . -2145) ((marker) . -2100) ((marker) . -2100) ((marker) . -2049) ((marker) . -2049) ((marker) . -1895) ((marker) . -1895) ((marker) . -1912) ((marker) . -1912) ((marker) . -1953) ((marker) . -1953) ((marker) . -1987) ((marker) . -1987) ((marker . 170) . -236) ((marker . 170) . -1) ((marker . 170) . -1) nil undo-tree-canary))

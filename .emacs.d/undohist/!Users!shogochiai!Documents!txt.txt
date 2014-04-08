@@ -1,0 +1,9 @@
+
+((digest . "c9c6ea9886b4f6bfc709199d5672856d") (undo-list (244 . 245) (nil rear-nonsticky nil 243 . 244) (nil fontified nil 1 . 244) (1 . 244) nil (#("
+XvideosモデルってXvideoモデルに修正したほうが良いんですかね（固有名詞ですけど）最後にsがついたら違和感があって.pluralizeしてもXvideosがXvideosesになってくれないあたり使いにくいんですけどXvideoモデルを用意するのはSTIの設計として良くないっぽいですねtypeに'Xvideo'を入れないとおかしいことになりそう
+
+変えていいよ
+Video.typeに保存する文字列は'Xvideos'のままで良いですか？
+
+変えるならそこも変える必要がある
+" 0 228 (fontified t) 228 243 (fontified t) 243 244 (rear-nonsticky t fontified t) 244 245 (fontified t)) . 1) (t 21278 37601 0 0) ((marker . 1) . -245) ((marker) . -1) ((marker) . -1) ((marker) . -180) ((marker) . -180) ((marker) . -181) ((marker) . -181) ((marker) . -188) ((marker) . -188) ((marker) . -227) ((marker) . -227) ((marker) . -228) ((marker) . -228) ((marker . 1) . -227) ((marker . 1) . -201) ((marker . 1) . -245) ((marker . 1) . -245) ((marker . 1) . -245) nil (245 . 246) (nil rear-nonsticky nil 244 . 245) (nil fontified nil 1 . 245) (1 . 245) (t 0 0 0 -1000)))

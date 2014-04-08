@@ -1,0 +1,2 @@
+
+((digest . "e8a430f417ad45498ab42f5dd31bc193") (undo-list (123 . 128) nil (122 . 123) nil (121 . 122) (t 21240 51136 0 0) (119 . 121) (t 21240 51135 0 0) (117 . 119) nil (#("t" 0 1 (fontified t syntax-table nil face font-lock-constant-face)) . -117) nil (#("e" 0 1 (fontified t syntax-table nil face font-lock-constant-face)) . -118) nil (#("x" 0 1 (fontified t syntax-table nil face font-lock-constant-face)) . -119) nil (#("t" 0 1 (fontified t syntax-table nil face font-lock-constant-face)) . -120) (t 21237 47959 0 0)))

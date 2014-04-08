@@ -1,0 +1,2 @@
+
+((digest . "58cca639fd268ce3d56e05d36f290c90") (undo-list (#(", null: false" 0 8 (fontified t) 8 12 (fontified t face font-lock-variable-name-face) 12 13 (fontified t rear-nonsticky t syntax-table nil face font-lock-variable-name-face)) . -145) (t 21287 56193 0 0) nil (#(", null: false" 0 8 (fontified t) 8 12 (fontified t face font-lock-variable-name-face) 12 13 (rear-nonsticky t fontified t syntax-table nil face font-lock-variable-name-face)) . 180) (t 21287 56114 0 0) ((marker . 145) . -13) ((marker . 167) . -1) ((marker . 167) . -13) nil undo-tree-canary))
