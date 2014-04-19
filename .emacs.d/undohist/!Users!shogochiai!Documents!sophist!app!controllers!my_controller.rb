@@ -1,0 +1,2 @@
+
+((digest . "98aeba3cd604aae6a72ac92a11478957") (undo-list nil (92 . 98) nil (#("c" 0 1 (fontified t)) . -92) (t 21322 39803 0 0) nil (92 . 93) nil (#("f" 0 1 (fontified t)) . -92) ((marker . 92) . -1) nil (#("r" 0 1 (fontified t)) . -93) nil (#("i" 0 1 (fontified t)) . -93) ((marker . 92) . -1) nil (#("l" 0 1 (fontified t)) . -94) ((marker . 92) . -1) nil (#("t" 0 1 (fontified t)) . -95) ((marker . 92) . -1) nil (#("e" 0 1 (fontified t face font-lock-builtin-face)) . -96) (t 21322 39752 0 0) ((marker . 92) . -1)))

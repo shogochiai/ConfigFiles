@@ -31,6 +31,8 @@ alias -g Music='cd /Users/shogochiai/Documents/UNS/S4M/trunk'
 alias -g Cite='cd /Users/shogochiai/Documents/citedly'
 alias -g Han='cd /Users/shogochiai/Documents/hansode'
 alias -g Sub='cd /Users/shogochiai/Documents/submarine'
+alias -g Sop='cd /Users/shogochiai/Documents/sophist'
+alias -g Fox='cd /Users/shogochiai/Dropbox/dowbledown/cam/foxdie'
 
 alias cl='find . -type f | xargs cat | wc -l'
 alias ls='ls -G'
@@ -41,6 +43,10 @@ alias glg='git logg | head'
 
 rails_new () {
   rails new $* -T -m rails_template/rails_template.rb -d=mysql --skip-bundle
+}
+
+grep_sed () {
+  git grep -l "$1" | xargs sed -i "" "s/$1/$2/g"
 }
 
 ####git関数####

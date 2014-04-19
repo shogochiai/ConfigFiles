@@ -1,0 +1,3 @@
+
+((digest . "5fe8d55f60fb8cfdeb0dc3208f7d5083") (undo-list (#("  LIMIT-1 = 0
+" 0 2 (fontified t) 2 7 (fontified t face font-lock-type-face) 7 9 (fontified t) 9 12 (fontified t) 12 13 (fontified t syntax-table nil) 13 14 (fontified t rear-nonsticky t)) . -177) (t 21324 1353 0 0) ((marker . 480) . -14) ((marker . 480) . -14) ((marker . 177) . -14) ((marker*) . 12) ((marker*) . 1) ((marker . 177) . -7) nil (184 . 186) nil (#("0" 0 1 (fontified t face font-lock-type-face)) . -184) (t 21324 1351 0 0) nil (nil rear-nonsticky nil 189 . 190) (nil fontified nil 189 . 190) (nil fontified nil 188 . 189) (nil fontified nil 185 . 188) (nil fontified nil 179 . 185) (nil fontified nil 177 . 179) (177 . 190) (t 21323 42592 0 0)))
