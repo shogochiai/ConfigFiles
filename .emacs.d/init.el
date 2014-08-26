@@ -1014,3 +1014,13 @@ and source-file directory for your debugger." t)
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; # after-make-frame-functionsにhook足すのは非推奨らしいけど新しいフレーム開いたときに白背景になるので対策
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun my-set-display-for-windowed-frames (frame)
+    (select-frame frame)
+      (set-background-color "black")
+        (set-foreground-color "white"))
+(add-hook 'after-make-frame-functions 'my-set-display-for-windowed-frames)
+  (my-set-display-for-windowed-frames (selected-frame))

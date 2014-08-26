@@ -1,4 +1,0 @@
-ConfigFiles
-===========
-
-.zshrc .emacs
