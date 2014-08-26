@@ -17,7 +17,7 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; elispとconfディレクトリをサブディレクトリごとload-pathに追加
-(add-to-load-path "elisp" "conf")
+(add-to-load-path "elisp")
 
 (setq load-path (cons "/Applications/Emacs.app/Contents/Resources/site-lisp/" load-path))
 
@@ -43,7 +43,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ファイル検索関連
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq default-directory "/Users/shogochiai/Documents/")
+(setq default-directory "/Users/sgtn/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 表示関係
@@ -128,6 +128,28 @@
              (progn
                (font-lock-mode t)
                (font-lock-fontify-buffer))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Mac用フォント設定
+;; http://tcnksm.sakura.ne.jp/blog/2012/04/02/emacs/
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ ;; 英語
+ (set-face-attribute 'default nil
+             :family "Menlo" ;; font
+             :height 110)    ;; font size
+
+;; 日本語
+(set-fontset-font
+ nil 'japanese-jisx0208
+;; (font-spec :family "Hiragino Mincho Pro")) ;; font
+  (font-spec :family "Hiragino Kaku Gothic ProN")) ;; font
+                                   
+;; 半角と全角の比を1:2にしたければ
+(setq face-font-rescale-alist
+;;        '((".*Hiragino_Mincho_pro.*" . 1.2)))
+      '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2)));; Mac用フォント設定
 
 
 
@@ -543,17 +565,6 @@ and source-file directory for your debugger." t)
 (setq rails-use-mongrel t)
 ;(require 'cl)
 (require 'rails)
-
-;; erb Rinari
-(add-to-list 'load-path "~/.emacs.d/elisp/rinari")
-(require 'rinari)
-;; set ruby-mode indent
-(setq rinari-indent-level 2)
-(setq rinari-indent-tabs-mode nil)
-
-;; haml
-(require 'haml-mode) (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
-
 
 ;; ruby-block
 (require 'ruby-block)
